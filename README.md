@@ -18,3 +18,4 @@ View your app in AI Studio: https://ai.studio/apps/1e7a3918-f3d3-4f21-a338-b8a3d
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+"# bacapp1" 
