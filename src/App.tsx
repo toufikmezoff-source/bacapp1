@@ -36,21 +36,21 @@ export default function App() {
       name: 'بنك الامتحانات',
       description: 'أرشيف المواضيع مع الحلول النموذجية',
       icon: BookOpen,
-      accentColor: 'text-sky-400 bg-sky-500/10 border-sky-500/20'
+      accentColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'
     },
     {
       id: 'videos' as TabId,
       name: 'فيديوهات وشروحات',
       description: 'متابعة مرئية للدروس والمحاور المنهجية',
       icon: Film,
-      accentColor: 'text-sky-400 bg-sky-500/10 border-sky-500/20'
+      accentColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'
     },
     {
       id: 'books' as TabId,
       name: 'الكتب والمراجع الخارجية',
       description: 'سلاسل كتب الأساتذة الموثوقة والمطالعة',
       icon: BookMarked,
-      accentColor: 'text-sky-450 text-sky-450 border-sky-500/20'
+      accentColor: 'text-emerald-400 text-emerald-400 border-emerald-500/20'
     }
   ];
 
@@ -66,13 +66,13 @@ export default function App() {
           
           {/* Logo / Title Area */}
           <div className="flex items-center gap-2.5 flex-row-reverse">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-sky-600 to-sky-400 text-stone-950 flex items-center justify-center shadow-lg shadow-sky-500/10 shrink-0">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 text-stone-950 flex items-center justify-center shadow-lg shadow-emerald-500/10 shrink-0">
               <GraduationCap size={22} strokeWidth={2.5} />
             </div>
             <div className="text-right">
               <h1 className="text-sm md:text-base font-black text-white font-sans flex items-center gap-1.5 flex-row-reverse">
                 <span>بوابة البكالوريا الإلكترونية</span>
-                <span className="text-[10px] bg-sky-950 text-sky-400 px-2 py-0.5 rounded-full border border-sky-800/40 select-none">
+                <span className="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-800/40 select-none">
                   العلوم التجريبية
                 </span>
               </h1>
@@ -89,7 +89,7 @@ export default function App() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`cursor-pointer flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition border ${isActive ? 'bg-sky-500 text-stone-950 border-sky-500 shadow-md font-black' : 'text-stone-400 border-transparent hover:border-stone-800 hover:text-stone-200'}`}
+                  className={`cursor-pointer flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition border ${isActive ? 'bg-emerald-500 text-stone-950 border-emerald-500 shadow-md font-black' : 'text-stone-400 border-transparent hover:border-stone-800 hover:text-stone-200'}`}
                   id={`tab-nav-${tab.id}`}
                 >
                   <IconComp size={15} />
@@ -125,7 +125,7 @@ export default function App() {
               {/* Close & branding */}
               <div className="flex items-center justify-between border-b border-stone-850 pb-4 flex-row-reverse">
                 <div className="flex items-center gap-2 flex-row-reverse">
-                  <div className="h-8 w-8 rounded-lg bg-sky-500 text-stone-950 flex items-center justify-center">
+                  <div className="h-8 w-8 rounded-lg bg-emerald-500 text-stone-950 flex items-center justify-center">
                     <GraduationCap size={16} />
                   </div>
                   <span className="text-xs font-bold text-white">العلوم التجريبية</span>
@@ -152,7 +152,7 @@ export default function App() {
                         setActiveTab(tab.id);
                         setIsSidebarOpen(false);
                       }}
-                      className={`cursor-pointer w-full flex items-center gap-3 px-4 py-3 rounded-xl text-xs font-bold text-right transition border ${isActive ? 'bg-sky-500 text-stone-950 border-sky-500 font-black shadow-lg shadow-sky-500/5' : 'text-stone-300 border-transparent hover:bg-stone-900'}`}
+                      className={`cursor-pointer w-full flex items-center gap-3 px-4 py-3 rounded-xl text-xs font-bold text-right transition border ${isActive ? 'bg-emerald-500 text-stone-950 border-emerald-500 font-black shadow-lg shadow-emerald-500/5' : 'text-stone-300 border-transparent hover:bg-stone-900'}`}
                       id={`sidebar-tab-${tab.id}`}
                     >
                       <IconComp size={16} />
@@ -186,12 +186,12 @@ export default function App() {
         
         {/* Intro/Welcome Greeting */}
         <div className="mb-8 border border-stone-800 bg-stone-900/40 p-6 md:p-8 rounded-2xl relative overflow-hidden" id="greeting-banner">
-          <div className="absolute top-0 left-0 h-full w-[25%] bg-sky-500/5 blur-3xl pointer-events-none"></div>
+          <div className="absolute top-0 left-0 h-full w-[25%] bg-emerald-500/5 blur-3xl pointer-events-none"></div>
           
           <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-6">
             <div className="space-y-2 text-right">
               <div className="flex items-center gap-2 flex-row-reverse justify-start">
-                <Sparkles size={16} className="text-sky-400 animate-bounce" />
+                <Sparkles size={16} className="text-emerald-400 animate-bounce" />
                 <h2 className="text-base md:text-lg font-black text-white">أهلاً بك يا بطل المستقبل في مساحة تفوقك!</h2>
               </div>
               <p className="text-stone-400 text-xs md:text-sm leading-relaxed max-w-2xl font-normal">
@@ -202,15 +202,15 @@ export default function App() {
             {/* Quick stats badges column */}
             <div className="flex gap-2.5 flex-row-reverse shrink-0">
               <div className="bg-stone-950 border border-stone-800 p-3 rounded-xl text-center min-w-[90px]">
-                <span className="text-sm font-black text-sky-400 font-mono block">10+</span>
+                <span className="text-sm font-black text-emerald-400 font-mono block">10+</span>
                 <span className="text-[9px] text-stone-500 font-semibold block mt-0.5">مواد علمية</span>
               </div>
               <div className="bg-stone-950 border border-stone-800 p-3 rounded-xl text-center min-w-[90px]">
-                <span className="text-sm font-black text-sky-400 font-mono block">2015-2025</span>
+                <span className="text-sm font-black text-emerald-400 font-mono block">2015-2025</span>
                 <span className="text-[9px] text-stone-500 font-semibold block mt-0.5">أرشيف رسمي</span>
               </div>
               <div className="bg-stone-950 border border-stone-800 p-3 rounded-xl text-center min-w-[90px]">
-                <span className="text-sm font-black text-sky-450 text-sky-400 font-mono block">تفاعلي</span>
+                <span className="text-sm font-black text-emerald-400 font-mono block">تفاعلي</span>
                 <span className="text-[9px] text-stone-500 font-semibold block mt-0.5">مستعرض PDF</span>
               </div>
             </div>

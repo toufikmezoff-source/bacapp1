@@ -94,7 +94,7 @@ export default function VideoSection() {
       {/* 🔴 STEP 1: SUBJECT PICKER */}
       <div className="bg-stone-900/40 p-6 md:p-8 rounded-2xl border border-stone-850">
         <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2 flex-row-reverse justify-end pb-3 border-b border-stone-800">
-          <Tv className="text-sky-400" size={18} />
+          <Tv className="text-emerald-400" size={18} />
           <span>الخطوة 1: اختر المادة لعرض شروحاتها</span>
         </h3>
         
@@ -109,7 +109,7 @@ export default function VideoSection() {
                   setSelectedSubjectId(sub.id);
                   setSelectedChapterId('all'); // reset chapter selection on subject change
                 }}
-                className={`cursor-pointer rounded-xl px-4 py-2.5 text-xs font-bold border transition ${isSelected ? 'bg-sky-500 text-stone-900 font-black border-sky-500' : 'bg-stone-955 bg-stone-950/85 border-stone-800 text-stone-300 hover:border-stone-700'}`}
+                className={`cursor-pointer rounded-xl px-4 py-2.5 text-xs font-bold border transition ${isSelected ? 'bg-emerald-500 text-stone-900 font-black border-emerald-500' : 'bg-stone-955 bg-stone-950/85 border-stone-800 text-stone-300 hover:border-stone-700'}`}
                 id={`video-sub-${sub.id}`}
               >
                 {sub.name}
@@ -123,7 +123,7 @@ export default function VideoSection() {
       <div className="bg-stone-900/10 p-5 rounded-xl border border-stone-850">
         <div className="flex items-center justify-between mb-4 flex-row-reverse">
           <div className="flex items-center gap-2 flex-row-reverse">
-            <FolderOpen size={16} className="text-sky-400" />
+            <FolderOpen size={16} className="text-emerald-400" />
             <h4 className="text-xs font-bold text-stone-300">
               الخطوة 2: حدد المحور أو الوحدة التعليمية لمادة ({currentSubject.name})
             </h4>
@@ -137,7 +137,7 @@ export default function VideoSection() {
         <div className="flex flex-wrap gap-2 justify-end">
           <button
             onClick={() => setSelectedChapterId('all')}
-            className={`cursor-pointer rounded-lg px-3.5 py-2 text-xs transition border font-medium ${selectedChapterId === 'all' ? 'bg-sky-500/10 border-sky-500 text-sky-400 font-bold' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
+            className={`cursor-pointer rounded-lg px-3.5 py-2 text-xs transition border font-medium ${selectedChapterId === 'all' ? 'bg-emerald-500/10 border-emerald-500 text-emerald-400 font-bold' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
             id="chapter-btn-all"
           >
             عرض كافة الدروس والوحدات
@@ -147,7 +147,7 @@ export default function VideoSection() {
             <button
               key={ch.id}
               onClick={() => setSelectedChapterId(ch.id)}
-              className={`cursor-pointer rounded-lg px-3.5 py-2 text-xs transition border font-medium ${selectedChapterId === ch.id ? 'bg-sky-500/10 border-sky-400 text-sky-400 font-bold' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
+              className={`cursor-pointer rounded-lg px-3.5 py-2 text-xs transition border font-medium ${selectedChapterId === ch.id ? 'bg-emerald-500/10 border-emerald-400 text-emerald-400 font-bold' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
               id={`chapter-btn-${ch.id}`}
             >
               {ch.name}
@@ -159,7 +159,7 @@ export default function VideoSection() {
       {/* 🔴 STEP 3: VIDEO PLAYLIST GRID */}
       <div>
         <div className="flex items-center gap-2 mb-6 flex-row-reverse justify-start">
-          <Sparkles size={16} className="text-sky-400 animate-pulse" />
+          <Sparkles size={16} className="text-emerald-400 animate-pulse" />
           <h4 className="text-sm font-black text-white">
             شروحات مرئية مدعومة من اليوتيوب ({filteredVideos.length} شريط فيديو):
           </h4>
@@ -190,7 +190,7 @@ export default function VideoSection() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button 
                       onClick={() => setActivePlayVideo(vid)}
-                      className="cursor-pointer h-12 w-12 rounded-full bg-sky-500 text-stone-950 flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:bg-sky-400 transition transform duration-350"
+                      className="cursor-pointer h-12 w-12 rounded-full bg-emerald-500 text-stone-950 flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:bg-emerald-400 transition transform duration-350"
                       title="تشغيل الفيديو"
                       id={`play-btn-${vid.id}`}
                     >
@@ -209,11 +209,11 @@ export default function VideoSection() {
                   <div className="space-y-2">
                     {/* Teacher name indicator */}
                     <div className="flex items-center gap-1.5 text-stone-500 text-[10px] font-bold flex-row-reverse">
-                      <User size={12} className="text-sky-400/80" />
+                      <User size={12} className="text-emerald-400/80" />
                       <span>{vid.teacher}</span>
                     </div>
 
-                    <h4 className="text-xs md:text-sm font-extrabold text-stone-100 group-hover:text-sky-400 transition-colors line-clamp-2 leading-relaxed">
+                    <h4 className="text-xs md:text-sm font-extrabold text-stone-100 group-hover:text-emerald-400 transition-colors line-clamp-2 leading-relaxed">
                       {vid.title}
                     </h4>
                   </div>
@@ -226,7 +226,7 @@ export default function VideoSection() {
                     </span>
                     <button
                       onClick={() => setActivePlayVideo(vid)}
-                      className="cursor-pointer text-[10px] font-bold text-sky-400 hover:text-sky-300 transition"
+                      className="cursor-pointer text-[10px] font-bold text-emerald-400 hover:text-emerald-300 transition"
                     >
                       مشاهدة الآن المقطع ←
                     </button>
@@ -245,7 +245,7 @@ export default function VideoSection() {
             {/* Modal header */}
             <div className="flex items-center justify-between bg-stone-950 px-5 py-3 border-b border-stone-850 flex-row-reverse">
               <div className="text-right">
-                <span className="text-[10px] bg-sky-950 text-sky-400 font-bold px-2 py-0.5 rounded-full select-none">
+                <span className="text-[10px] bg-emerald-950 text-emerald-400 font-bold px-2 py-0.5 rounded-full select-none">
                   عرض مرئي من اليوتيوب
                 </span>
                 <h4 className="text-xs md:text-sm font-bold text-stone-200 mt-1 truncate max-w-md">

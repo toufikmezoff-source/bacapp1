@@ -56,17 +56,17 @@ export default function CountdownHeader() {
   return (
     <div className="w-full bg-stone-900 border-b border-stone-800 text-stone-100 py-3.5 px-4 md:px-8 relative overflow-hidden" id="countdown-banner">
       {/* Background glow lines */}
-      <div className="absolute top-0 right-0 h-full w-[25%] bg-sky-500/5 blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 h-full w-[25%] bg-emerald-500/5 blur-3xl pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
         {/* Title & MOTIVATIONAL MSG */}
         <div className="flex items-center gap-3 text-right">
-          <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400 shrink-0">
+          <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0">
             <Award className="h-5 w-5 animate-pulse" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-xs bg-sky-950/80 border border-sky-800/40 text-sky-300 font-bold px-2.5 py-0.5 rounded-full select-none">
+              <span className="text-xs bg-emerald-950/80 border border-emerald-800/40 text-emerald-300 font-bold px-2.5 py-0.5 rounded-full select-none">
                 امتحانات بكالوريا 2027
               </span>
               <h2 className="text-sm font-bold text-white font-sans">العد التنازلي الحاسم</h2>
@@ -90,12 +90,12 @@ export default function CountdownHeader() {
             </div>
           </div>
 
-          <span className="text-xl font-bold text-sky-500 animate-pulse">:</span>
+          <span className="text-xl font-bold text-emerald-500 animate-pulse">:</span>
 
           {/* Hours */}
           <div className="flex flex-col items-center">
             <div className="min-w-[50px] md:min-w-[54px] bg-stone-950 border border-stone-800 rounded-lg p-2 text-center shadow-inner relative">
-              <span className="text-base md:text-lg font-black text-sky-400 font-mono block">
+              <span className="text-base md:text-lg font-black text-emerald-400 font-mono block">
                 {String(timeLeft.hours).padStart(2, '0')}
               </span>
               <span className="text-[9px] text-stone-500 font-semibold block mt-0.5">ساعة</span>
@@ -103,12 +103,12 @@ export default function CountdownHeader() {
             </div>
           </div>
 
-          <span className="text-xl font-bold text-sky-500 animate-pulse">:</span>
+          <span className="text-xl font-bold text-emerald-500 animate-pulse">:</span>
 
           {/* Minutes */}
           <div className="flex flex-col items-center">
             <div className="min-w-[50px] md:min-w-[54px] bg-stone-950 border border-stone-800 rounded-lg p-2 text-center shadow-inner relative">
-              <span className="text-base md:text-lg font-black text-sky-400 font-mono block">
+              <span className="text-base md:text-lg font-black text-emerald-400 font-mono block">
                 {String(timeLeft.minutes).padStart(2, '0')}
               </span>
               <span className="text-[9px] text-stone-500 font-semibold block mt-0.5">دقيقة</span>
@@ -116,16 +116,16 @@ export default function CountdownHeader() {
             </div>
           </div>
 
-          <span className="text-xl font-bold text-sky-500 animate-pulse">:</span>
+          <span className="text-xl font-bold text-emerald-500 animate-pulse">:</span>
 
           {/* Seconds */}
           <div className="flex flex-col items-center">
-            <div className="min-w-[50px] md:min-w-[54px] bg-sky-500/10 border border-sky-500/30 rounded-lg p-2 text-center shadow-inner relative">
-              <span className="text-base md:text-lg font-black text-sky-400 font-mono block animate-none">
+            <div className="min-w-[50px] md:min-w-[54px] bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-2 text-center shadow-inner relative">
+              <span className="text-base md:text-lg font-black text-emerald-400 font-mono block animate-none">
                 {String(timeLeft.seconds).padStart(2, '0')}
               </span>
-              <span className="text-[9px] text-sky-500/70 font-semibold block mt-0.5">ثانية</span>
-              <div className="absolute inset-x-0 top-1/2 h-[1px] bg-sky-500/5"></div>
+              <span className="text-[9px] text-emerald-500/70 font-semibold block mt-0.5">ثانية</span>
+              <div className="absolute inset-x-0 top-1/2 h-[1px] bg-emerald-500/5"></div>
             </div>
           </div>
         </div>

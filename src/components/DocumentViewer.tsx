@@ -95,7 +95,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
            .header { text-align: center; border-bottom: 2px solid black; padding-bottom: 20px; margin-bottom: 30px; }
            .section { margin-bottom: 30px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
            .score { float: left; font-weight: bold; }
-           h2 { color: #1e90ff; }
+           h2 { color: #10b981; }
          </style>
        </head>
        <body>
@@ -186,7 +186,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
           <div className="flex rounded-lg bg-stone-950 p-1 border border-stone-800 text-xs">
             <button
               onClick={() => { setIsSolution(false); setCurrentPage(0); }}
-              className={`rounded px-3 py-1.5 transition font-medium ${!isSolution ? 'bg-sky-500 text-stone-950 shadow' : 'text-stone-400 hover:text-stone-200'}`}
+              className={`rounded px-3 py-1.5 transition font-medium ${!isSolution ? 'bg-emerald-500 text-stone-950 shadow' : 'text-stone-400 hover:text-stone-200'}`}
               id="btn-doc-subject"
             >
               <div className="flex items-center gap-1">
@@ -196,7 +196,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
             </button>
             <button
               onClick={() => { setIsSolution(true); setCurrentPage(0); }}
-              className={`rounded px-3 py-1.5 transition font-medium ${isSolution ? 'bg-emerald-500 text-stone-950 shadow' : 'text-stone-400 hover:text-stone-200'}`}
+              className={`rounded px-3 py-1.5 transition font-medium ${isSolution ? 'bg-teal-550 bg-teal-500 text-stone-950 shadow' : 'text-stone-400 hover:text-stone-200'}`}
               id="btn-doc-solution"
             >
               <div className="flex items-center gap-1">
@@ -266,7 +266,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
           <div className="relative">
             <button 
               onClick={() => setIsSearching(!isSearching)}
-              className={`rounded p-1.5 transition ${isSearching ? 'bg-stone-800 text-sky-400' : 'text-stone-400 hover:bg-stone-800 hover:text-white'}`}
+              className={`rounded p-1.5 transition ${isSearching ? 'bg-stone-800 text-emerald-400' : 'text-stone-400 hover:bg-stone-800 hover:text-white'}`}
               title="بحث داخل المستند"
               id="btn-doc-search-toggle"
             >
@@ -280,7 +280,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
                   placeholder="ابحث عن كلمة مفتاحية..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full rounded border border-stone-700 bg-stone-950 px-2.5 py-1 text-xs text-stone-100 placeholder-stone-500 focus:border-sky-500 focus:outline-none"
+                  className="w-full rounded border border-stone-700 bg-stone-950 px-2.5 py-1 text-xs text-stone-100 placeholder-stone-500 focus:border-emerald-500 focus:outline-none"
                   autoFocus
                   id="input-doc-search"
                 />
@@ -294,7 +294,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
                           onClick={() => {
                             setCurrentPage(f.pageIdx);
                           }}
-                          className={`w-full text-right p-1.5 rounded transition ${currentPage === f.pageIdx ? 'bg-sky-500/10 text-sky-400' : 'text-stone-400 hover:bg-stone-900'}`}
+                          className={`w-full text-right p-1.5 rounded transition ${currentPage === f.pageIdx ? 'bg-emerald-500/10 text-emerald-400' : 'text-stone-400 hover:bg-stone-900'}`}
                         >
                           <p className="font-semibold">{f.pageTitle} (تفصيل)</p>
                           <p className="text-[9px] text-stone-500 truncate mt-0.5">
@@ -351,7 +351,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
             </div>
             
             <div className="mt-5">
-              <h2 className="text-lg md:text-xl font-black text-white hover:text-sky-400 transition">
+              <h2 className="text-lg md:text-xl font-black text-white hover:text-emerald-400 transition">
                 {type === 'exam' ? (data as Exam).name : (data as Book).title}
               </h2>
               <div className="mt-2 text-xs text-stone-400 flex items-center justify-center gap-4">
@@ -375,13 +375,13 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
               type === 'exam' ? (
                 // EXAM RENDERING
                 <div>
-                  <div className="flex justify-between items-center border-b border-sky-950 pb-3 mb-6">
-                    <h3 className="text-base font-bold text-sky-400 flex items-center gap-2">
-                      <HelpCircle size={18} className="text-sky-500" />
+                  <div className="flex justify-between items-center border-b border-emerald-950/40 pb-3 mb-6">
+                    <h3 className="text-base font-bold text-emerald-400 flex items-center gap-2">
+                      <HelpCircle size={18} className="text-emerald-550 text-emerald-500" />
                       <span>{activePageData.title}</span>
                     </h3>
                     {'score' in activePageData && (
-                      <span className="text-xs bg-sky-950/50 border border-sky-800/40 text-sky-300 font-bold px-3 py-1 rounded-full">
+                      <span className="text-xs bg-emerald-950/50 border border-emerald-800/40 text-emerald-300 font-bold px-3 py-1 rounded-full">
                         {activePageData.score}
                       </span>
                     )}
@@ -392,7 +392,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
                     <div className="my-6 border border-stone-850 bg-stone-900/40 p-4 rounded-lg flex flex-col items-center justify-center text-center">
                       <div className="w-full max-w-sm h-32 relative border border-stone-800 rounded bg-stone-950 p-2 flex items-center justify-center">
                         {activePageData.diagramType === 'circuit' && (
-                          <svg viewBox="0 0 400 120" className="w-full h-full text-sky-400 font-mono">
+                          <svg viewBox="0 0 400 120" className="w-full h-full text-emerald-400 font-mono">
                             {/* Circuit schematic drawing */}
                             <path d="M 20 60 L 100 60 M 140 60 L 220 60 M 260 60 L 380 60" stroke="currentColor" strokeWidth="1.5" fill="none" />
                             {/* Generator symbol */}
@@ -435,7 +435,7 @@ export default function DocumentViewer({ document, onClose }: DocumentViewerProp
                   <div className="space-y-6">
                     {('questions' in activePageData) && activePageData.questions.map((q, qidx) => (
                       <div key={qidx} className="group flex items-start gap-3.5 leading-relaxed rounded-md hover:bg-stone-900/10 p-1.5 transition">
-                        <span className="flex h-5 w-5 shrink-0 select-none items-center justify-center rounded-full bg-stone-900 text-[11px] font-bold text-stone-400 font-mono group-hover:bg-sky-950 group-hover:text-sky-400 transition">
+                        <span className="flex h-5 w-5 shrink-0 select-none items-center justify-center rounded-full bg-stone-900 text-[11px] font-bold text-stone-400 font-mono group-hover:bg-emerald-950 group-hover:text-emerald-400 transition">
                           {qidx + 1}
                         </span>
                         <p className="text-stone-300 text-sm whitespace-pre-wrap flex-1">{q}</p>

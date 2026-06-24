@@ -50,7 +50,7 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
             placeholder="ابحث بـاسم الكتاب أو المؤلف..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-stone-950 border border-stone-800 rounded-xl pr-10 pl-4 py-2 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-sky-500 text-right font-medium"
+            className="w-full bg-stone-950 border border-stone-800 rounded-xl pr-10 pl-4 py-2 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-emerald-500 text-right font-medium"
             id="book-search-input"
           />
         </div>
@@ -61,7 +61,7 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
           <div className="flex gap-1.5 flex-row-reverse">
             <button
               onClick={() => setSelectedSubjectId('all')}
-              className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-bold ${selectedSubjectId === 'all' ? 'bg-sky-500 text-stone-950 border-sky-500' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
+              className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-bold ${selectedSubjectId === 'all' ? 'bg-emerald-500 text-stone-950 border-emerald-500' : 'bg-stone-955 border-stone-800 text-stone-400 hover:text-stone-200'}`}
               id="book-filter-all"
             >
               الكل
@@ -70,7 +70,7 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
               <button
                 key={sub.id}
                 onClick={() => setSelectedSubjectId(sub.id)}
-                className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-bold ${selectedSubjectId === sub.id ? 'bg-sky-500 text-stone-900 border-sky-550' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
+                className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-bold ${selectedSubjectId === sub.id ? 'bg-emerald-500 text-stone-900 border-emerald-500' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
                 id={`book-filter-${sub.id}`}
               >
                 {sub.name}
@@ -82,17 +82,17 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
 
       {/* 🔴 INTRO BANNER */}
       <div className="relative overflow-hidden bg-gradient-to-l from-stone-950 to-stone-900 border border-stone-850 p-6 rounded-2xl flex flex-col md:flex-row-reverse justify-between items-center gap-4">
-        <div className="absolute top-0 left-0 h-full w-[20%] bg-sky-500/5 blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 left-0 h-full w-[20%] bg-emerald-500/5 blur-3xl pointer-events-none"></div>
         <div className="space-y-1 text-right">
           <h4 className="text-sm font-black text-white flex items-center gap-2 flex-row-reverse">
-            <Library size={18} className="text-sky-400" />
+            <Library size={18} className="text-emerald-400" />
             <span>خزانة المراجع والكتب الخارجية للأساتذة</span>
           </h4>
           <p className="text-stone-400 text-xs leading-relaxed max-w-xl">
             حقيبة تعليمية رقمية متكاملة تضم أفضل السلاسل والكتب الخارجية بصيغتها التفاعلية. تصفح الفصول والدروس واطبع الملخصات مباشرة.
           </p>
         </div>
-        <span className="text-xs font-mono font-bold bg-stone-900 border border-stone-850 px-3 py-1.5 rounded-xl text-sky-400 select-none">
+        <span className="text-xs font-mono font-bold bg-stone-900 border border-stone-850 px-3 py-1.5 rounded-xl text-emerald-400 select-none">
           {filteredBooks.length} كتب متوفرة للمطالعة
         </span>
       </div>
@@ -120,13 +120,13 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
                   <div className="absolute inset-0 bg-stone-950/40 group-hover:bg-stone-950/60 transition-colors" />
 
                   {/* Top subject label float */}
-                  <span className="absolute top-3.5 right-3.5 bg-stone-950/90 border border-stone-800 text-[9px] font-black text-sky-450 text-sky-400 px-2.5 py-1 rounded-full shadow-lg">
+                  <span className="absolute top-3.5 right-3.5 bg-stone-950/90 border border-stone-800 text-[9px] font-black text-emerald-400 px-2.5 py-1 rounded-full shadow-lg">
                     {sub.name}
                   </span>
 
                   {/* Centered book icon overlay */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="h-14 w-14 rounded-full bg-stone-950/90 backdrop-blur border border-stone-800 flex items-center justify-center scale-90 group-hover:scale-100 group-hover:bg-sky-500 group-hover:text-stone-950 transition-all duration-350">
+                    <div className="h-14 w-14 rounded-full bg-stone-950/90 backdrop-blur border border-stone-800 flex items-center justify-center scale-90 group-hover:scale-100 group-hover:bg-emerald-500 group-hover:text-stone-950 transition-all duration-350">
                       <BookOpen size={24} />
                     </div>
                   </div>
@@ -142,11 +142,11 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
                   <div className="space-y-2">
                     {/* Author line */}
                     <p className="text-[10px] text-stone-500 font-bold flex items-center gap-1 flex-row-reverse">
-                      <User size={11} className="text-sky-500/80" />
+                      <User size={11} className="text-emerald-500/80" />
                       <span>تأليف: {book.author}</span>
                     </p>
 
-                    <h4 className="text-xs md:text-sm font-black text-stone-100 group-hover:text-sky-400 transition truncate mt-1">
+                    <h4 className="text-xs md:text-sm font-black text-stone-100 group-hover:text-emerald-400 transition truncate mt-1">
                       {book.title}
                     </h4>
 
@@ -160,7 +160,7 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
                   <div className="mt-4 pt-3.5 border-t border-stone-850">
                     <button
                       onClick={() => onOpenDocument({ type: 'book', data: book })}
-                      className="cursor-pointer w-full flex items-center justify-center gap-2 rounded-xl bg-sky-500/10 border border-sky-500/25 text-xs font-bold text-sky-400 hover:bg-sky-500/15 hover:text-sky-300 transition py-2.5"
+                      className="cursor-pointer w-full flex items-center justify-center gap-2 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs font-bold text-emerald-400 hover:bg-emerald-500/15 hover:text-emerald-300 transition py-2.5"
                       id={`btn-read-book-${book.id}`}
                     >
                       <BookOpen size={14} />
@@ -177,7 +177,7 @@ export default function BookSection({ onOpenDocument }: BookSectionProps) {
           <p className="text-stone-400 text-xs">لا توجد مصادر أو كتب خارجية مطابقة لمعايير التصفية والبحث الحالية.</p>
           <button
             onClick={() => { setSelectedSubjectId('all'); setSearchQuery(''); }}
-            className="mt-4 rounded-lg bg-sky-500 text-stone-950 font-bold px-4 py-2 text-xs hover:bg-sky-400 transition"
+            className="mt-4 rounded-lg bg-emerald-500 text-stone-950 font-bold px-4 py-2 text-xs hover:bg-emerald-400 transition"
             id="btn-books-reset"
           >
             إعادة التصفية

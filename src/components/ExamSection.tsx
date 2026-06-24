@@ -164,7 +164,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
   const getSessionStyle = (session: SessionType) => {
     switch (session) {
       case 'normal':
-        return 'bg-sky-500/10 text-sky-400 border-sky-500/30';
+        return 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30';
       case 'retake':
         return 'bg-amber-500/10 text-amber-400 border-amber-500/30';
       case 'exceptional':
@@ -186,7 +186,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
       {/* 🟢 STEP 1: SUBJECT SELECTOR */}
       <div className="bg-stone-900/40 p-6 md:p-8 rounded-2xl border border-stone-850">
         <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2 flex-row-reverse justify-end pb-3 border-b border-stone-800">
-          <Award className="text-sky-400" size={18} />
+          <Award className="text-emerald-400" size={18} />
           <span>اختر المادة الدراسية للمعاينة</span>
         </h3>
         <p className="text-stone-400 text-xs mt-1 mb-6 leading-relaxed">
@@ -198,11 +198,11 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
           {/* ALL SUBJECTS option */}
           <button
             onClick={() => setSelectedSubjectId('all')}
-            className={`cursor-pointer group flex flex-col items-center justify-center p-4 rounded-xl border text-center transition ${selectedSubjectId === 'all' ? 'bg-sky-500/10 border-sky-500 text-sky-400 font-extrabold shadow-lg shadow-sky-500/5' : 'bg-stone-950/60 border-stone-800 hover:border-stone-700 text-stone-300'}`}
+            className={`cursor-pointer group flex flex-col items-center justify-center p-4 rounded-xl border text-center transition ${selectedSubjectId === 'all' ? 'bg-emerald-500/10 border-emerald-500 text-emerald-400 font-extrabold shadow-lg shadow-emerald-500/5' : 'bg-stone-950/60 border-stone-800 hover:border-stone-700 text-stone-300'}`}
             id="subject-btn-all"
           >
             <div className="p-2.5 rounded-lg bg-stone-900 border border-stone-800 group-hover:scale-105 transition mb-2.5">
-              <BookText size={20} className={selectedSubjectId === 'all' ? 'text-sky-400' : 'text-stone-400'} />
+              <BookText size={20} className={selectedSubjectId === 'all' ? 'text-emerald-400' : 'text-stone-400'} />
             </div>
             <span className="text-xs font-bold">جميع المواد العلميّة</span>
           </button>
@@ -214,11 +214,11 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
               <button
                 key={sub.id}
                 onClick={() => setSelectedSubjectId(sub.id)}
-                className={`cursor-pointer group flex flex-col items-center justify-center p-4 rounded-xl border text-center transition ${isSelected ? `bg-gradient-to-br ${sub.color} border-sky-500 text-sky-300 font-extrabold shadow-lg` : 'bg-stone-950/60 border-stone-800 hover:border-stone-700 text-stone-300'}`}
+                className={`cursor-pointer group flex flex-col items-center justify-center p-4 rounded-xl border text-center transition ${isSelected ? `bg-gradient-to-br ${sub.color} border-emerald-500 text-emerald-300 font-extrabold shadow-lg` : 'bg-stone-950/60 border-stone-800 hover:border-stone-700 text-stone-300'}`}
                 id={`subject-btn-${sub.id}`}
               >
                 <div className={`p-2.5 rounded-lg bg-stone-900 border border-stone-800 group-hover:scale-105 transition mb-2.5`}>
-                  <IconComponent size={20} className={isSelected ? 'text-sky-400' : 'text-stone-400'} />
+                  <IconComponent size={20} className={isSelected ? 'text-emerald-400' : 'text-stone-400'} />
                 </div>
                 <span className="text-xs font-bold leading-none">{sub.name}</span>
                 <span className="text-[9px] text-stone-500 mt-2 truncate max-w-full font-medium">بكالوريا علوم</span>
@@ -237,7 +237,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
           <div className="flex gap-1.5 flex-row-reverse">
             <button
               onClick={() => setSelectedYear('all')}
-              className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-medium ${selectedYear === 'all' ? 'bg-sky-500 text-stone-950 font-bold border-sky-500' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
+              className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-medium ${selectedYear === 'all' ? 'bg-emerald-500 text-stone-950 font-bold border-emerald-500' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
               id="year-btn-all"
             >
               الكل
@@ -246,7 +246,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
               <button
                 key={yr}
                 onClick={() => setSelectedYear(yr)}
-                className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-medium ${selectedYear === yr ? 'bg-sky-500 text-stone-950 font-bold border-sky-550' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
+                className={`rounded-lg px-3 py-1.5 text-xs transition border cursor-pointer font-medium ${selectedYear === yr ? 'bg-emerald-500 text-stone-950 font-bold border-emerald-550' : 'bg-stone-950 border-stone-800 text-stone-400 hover:text-stone-200'}`}
                 id={`year-btn-${yr}`}
               >
                 {yr}
@@ -265,7 +265,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
             placeholder="ابحث في المواضيع والتصحيحات..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-stone-950 border border-stone-800 rounded-xl pr-10 pl-4 py-2 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-sky-500 text-right font-medium"
+            className="w-full bg-stone-950 border border-stone-800 rounded-xl pr-10 pl-4 py-2 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-emerald-500 text-right font-medium"
             id="exam-search-input"
           />
         </div>
@@ -275,7 +275,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
       <div>
         <div className="flex items-center justify-between mb-5 flex-row-reverse">
           <h4 className="text-sm font-black text-white flex items-center gap-2 flex-row-reverse">
-            <FileSpreadsheet size={18} className="text-sky-400" />
+            <FileSpreadsheet size={18} className="text-emerald-400" />
             <span>المواضيع والامتحانات المتاحة:</span>
           </h4>
           <span className="text-xs font-mono text-stone-500 font-bold">
@@ -294,7 +294,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
                   id={`exam-card-${exam.id}`}
                 >
                   {/* Color strip top */}
-                  <div className={`h-1 w-full bg-gradient-to-r from-sky-500/20 to-sky-400/40`} />
+                  <div className={`h-1 w-full bg-gradient-to-r from-emerald-500/20 to-emerald-400/40`} />
 
                   <div className="p-5">
                     {/* Exam Metadata row */}
@@ -310,12 +310,12 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
 
                     {/* Subject Icon + name */}
                     <div className="flex items-center gap-3 mb-4 flex-row-reverse">
-                      <div className="p-2 rounded-lg bg-stone-950 border border-stone-800 shrink-0 text-sky-400">
+                      <div className="p-2 rounded-lg bg-stone-950 border border-stone-800 shrink-0 text-emerald-400">
                         {React.createElement(IconMap[sub.iconName] || BookText, { size: 16 })}
                       </div>
                       <div className="text-right">
                         <h5 className="text-xs font-bold text-stone-400">{sub.name}</h5>
-                        <h4 className="text-sm font-extrabold text-stone-100 group-hover:text-sky-100 transition truncate max-w-[200px] mt-0.5">
+                        <h4 className="text-sm font-extrabold text-stone-100 group-hover:text-emerald-100 transition truncate max-w-[200px] mt-0.5">
                           {exam.name}
                         </h4>
                       </div>
@@ -323,7 +323,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
 
                     {/* 🔹 EXQUISITE CSS MOCK THUMBNAIL (Simulation for Exam Paper image) */}
                     <div className="relative h-28 w-md max-w-full rounded-xl bg-stone-950 border border-stone-850 p-3 overflow-hidden flex flex-col justify-between select-none mb-4 group-hover:border-stone-700 transition">
-                      <div className="absolute top-0 right-0 h-full w-[35%] bg-sky-500/5 blur-xl pointer-events-none"></div>
+                      <div className="absolute top-0 right-0 h-full w-[35%] bg-emerald-500/5 blur-xl pointer-events-none"></div>
                       
                       {/* Mini Paper Header Layout */}
                       <div className="border-b border-stone-900 pb-1.5 flex items-center justify-between flex-row-reverse">
@@ -342,7 +342,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
                           <div className="h-1.5 w-1/2 rounded bg-stone-900/60" />
                         </div>
                         {exam.subjectId === 'math' || exam.subjectId === 'physics' ? (
-                          <div className="text-[6.5px] scale-90 text-sky-500 font-mono mr-5 font-semibold text-right">
+                          <div className="text-[6.5px] scale-90 text-emerald-500 font-mono mr-5 font-semibold text-right">
                             {exam.subjectId === 'math' ? 'Un+1 = (3Un + 2)/(Un + 4)' : 'Ur(t) + Uc(t) = E'}
                           </div>
                         ) : (
@@ -353,12 +353,12 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
                       {/* Mini Paper Footer */}
                       <div className="flex items-center justify-between border-t border-stone-900 pt-1 flex-row-reverse">
                         <span className="text-[7px] text-stone-600">الصفحة 1 من 2</span>
-                        <span className="text-[7.5px] text-sky-400 font-semibold font-sans">{sub.name}</span>
+                        <span className="text-[7.5px] text-emerald-400 font-semibold font-sans">{sub.name}</span>
                       </div>
 
                       {/* Overlay action on hover */}
                       <div className="absolute inset-0 bg-stone-950/70 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center backdrop-blur-[1px]">
-                        <span className="text-[11px] font-bold text-sky-400 border border-sky-450 bg-stone-950 px-3 py-1.5 rounded-lg shadow-xl shadow-stone-950/40">
+                        <span className="text-[11px] font-bold text-emerald-400 border border-emerald-450 bg-stone-950 px-3 py-1.5 rounded-lg shadow-xl shadow-stone-950/40">
                           معاينة سريعة للمستند
                         </span>
                       </div>
@@ -372,16 +372,16 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
                       className="cursor-pointer flex items-center justify-center gap-1.5 rounded-lg bg-stone-950 border border-stone-800 text-xs font-bold text-stone-300 hover:bg-stone-850 hover:text-white transition py-2"
                       id={`btn-open-exam-${exam.id}`}
                     >
-                      <FileText size={14} className="text-sky-400" />
+                      <FileText size={14} className="text-emerald-400" />
                       <span>عرض الموضوع</span>
                     </button>
                     
                     <button
                       onClick={() => onOpenDocument({ type: 'exam', data: exam, isSolution: true })}
-                      className="cursor-pointer flex items-center justify-center gap-1.5 rounded-lg bg-sky-500/10 border border-sky-500/20 text-xs font-bold text-sky-400 hover:bg-sky-500/15 hover:text-sky-300 transition py-2"
+                      className="cursor-pointer flex items-center justify-center gap-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold text-emerald-400 hover:bg-emerald-500/15 hover:text-emerald-300 transition py-2"
                       id={`btn-open-solution-${exam.id}`}
                     >
-                      <CheckCircle size={14} className="text-sky-400 animate-pulse" />
+                      <CheckCircle size={14} className="text-emerald-400 animate-pulse" />
                       <span>عرض الحل</span>
                     </button>
                   </div>
@@ -394,7 +394,7 @@ export default function ExamSection({ onOpenDocument }: ExamSectionProps) {
             <p className="text-stone-400 text-xs">لا توجد امتحانات مطابقة لمعايير التصفية الحالية.</p>
             <button
               onClick={() => { setSelectedSubjectId('all'); setSelectedYear('all'); setSearchQuery(''); }}
-              className="mt-4 rounded-lg bg-sky-500 text-stone-950 font-bold px-4 py-2 text-xs hover:bg-sky-400 transition"
+              className="mt-4 rounded-lg bg-emerald-500 text-stone-950 font-bold px-4 py-2 text-xs hover:bg-emerald-400 transition"
               id="btn-reset-filters"
             >
               إعادة تهيئة التصفية
